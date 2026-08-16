@@ -14,12 +14,12 @@ void sortArray(int arr[], int size){
 }
 
 int iterativeBinarySearch(int arr[],int size, int key){
-  int min=0,max=size-1;
-  while(min<=max){
-    int mid = (min+max)/2;
+  int low=0,high=size-1;
+  while(low<=high){
+    int mid = (low+high)/2;
     if(arr[mid] == key) return mid;
-    if(arr[mid] > key) max = mid-1;
-    if(arr[mid] < key) min = mid+1;
+    if(arr[mid] > key) high = mid-1;
+    if(arr[mid] < key) low = mid+1;
   }
   return -1;
 }
